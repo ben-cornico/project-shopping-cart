@@ -3,17 +3,14 @@ import React, { Component } from 'react'
 export class Navbar extends Component {
     constructor(props) {
         super();
-
-        this.state = {
-            cardActive: false
-        }
     }
+
   render() {
     return (
       <div>
-        <div className="cart-toggle">
+        <div className="cart-toggle" onClick={this.props.cartToggle}>
             PRESS
-        </div>
+        </div> 
       </div>
     )
   }

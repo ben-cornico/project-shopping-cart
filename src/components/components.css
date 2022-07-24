@@ -1,0 +1,17 @@
+.cart {
+    position: absolute;
+    background-color: rgb(144, 144, 144);
+    height: 100vh;
+    width: 100px;
+}
+
+.cart.hide {
+    right: -100px;
+    transition: 1s
+}
+
+.cart.active {
+    right: 0;
+    transition: 1s
+}
+
