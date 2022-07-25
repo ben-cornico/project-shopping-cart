@@ -1,7 +1,28 @@
+/* NAVBAR =============== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    gap:2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
 .cart {
     position: absolute;
     background-color: rgb(144, 144, 144);
-    height: 100vh;
+    height: 100%;
     width: 100px;
 }
 
@@ -13,5 +34,10 @@
 .cart.active {
     right: 0;
     transition: 1s
+}
+
+.img-prod {
+    height: 100px;
+    width: auto;
 }
 

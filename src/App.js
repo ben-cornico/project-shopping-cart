@@ -37,9 +37,10 @@ export class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Navbar cartToggle={this.cartToggle}/>
+
         <Cart active={this.state.cartActive} cartList={this.state.cartList}/>
         <BrowserRouter>
+        <Navbar cartToggle={this.cartToggle}/>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/shop' element={<Shop addCart={this.addCart}/>} />

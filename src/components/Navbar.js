@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Navbar extends Component {
     constructor(props) {
@@ -7,11 +8,22 @@ export class Navbar extends Component {
 
   render() {
     return (
-      <div>
+      <nav>
+        <h3 className='app-title'>
+          <Link to="/" className="nav-link">Zatapos</Link>
+        </h3>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/shop" className="nav-link">Products</Link>
+          </li>
+        </ul>
         <div className="cart-toggle" onClick={this.props.cartToggle}>
-            PRESS
+        <span class="mdi mdi-cart"></span>
         </div> 
-      </div>
+      </nav>
     )
   }
 }

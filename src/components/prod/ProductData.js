@@ -42,10 +42,10 @@ const productData = {
         {
             name: 'Everyday Move Slip-ons',
             img: [
-                require("./men's everyday  move slip-ons/EverydayMoveStandardOnyxBlackOnBlackSole-Transparent-WithShadowcopy2_27f41b06-6031-4b4e-b05f-07047ecfdb5a_400x.webp"),
-                require("./men's everyday  move slip-ons/EVMoveSlip-OnBlackOnBlack-3_4View-Transparent-WithShadow_a832d415-bcd7-4402-9772-142030f08f63_400x.webp"),
-                require("./men's everyday  move slip-ons/EVMoveSlip-OnBlackOnBlack-BackView-Transparent-WithShadow_cc42cb40-ebf5-4dc6-9dfa-101288c352d0_400x.webp"),
-                require("./men's everyday  move slip-ons/EVMoveSlip-OnBlackOnBlack-RightSideView-Transparent-WithShadow_18a32a6c-61b2-4ca2-80ac-deaae11eec85_400x.webp")
+                require("./men's everyday move slip-ons/EverydayMoveStandardOnyxBlackOnBlackSole-Transparent-WithShadowcopy2_27f41b06-6031-4b4e-b05f-07047ecfdb5a_400x.webp"),
+                require("./men's everyday move slip-ons/EVMoveSlip-OnBlackOnBlack-3_4View-Transparent-WithShadow_a832d415-bcd7-4402-9772-142030f08f63_400x.webp"),
+                require("./men's everyday move slip-ons/EVMoveSlip-OnBlackOnBlack-BackView-Transparent-WithShadow_cc42cb40-ebf5-4dc6-9dfa-101288c352d0_400x.webp"),
+                require("./men's everyday move slip-ons/EVMoveSlip-OnBlackOnBlack-RightSideView-Transparent-WithShadow_18a32a6c-61b2-4ca2-80ac-deaae11eec85_400x.webp")
             ]
         },
         {
