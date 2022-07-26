@@ -1,8 +1,12 @@
 /* NAVBAR =============== */
 nav {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 3rem;
+    background-color: aquamarine;
 }
 
 .nav-list {
@@ -24,6 +28,7 @@ ul {
     background-color: rgb(144, 144, 144);
     height: 100%;
     width: 100px;
+    z-index: 1;
 }
 
 .cart.hide {
@@ -41,3 +46,41 @@ ul {
     width: auto;
 }
 
+/* HOME ============================== */
+.home {
+    background-image: url('./images/homepage.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.main-line {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.offer-line {
+    font-size: 2rem;
+}
+
+.btn-group-home {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.btn-home {
+    margin: 1rem 0;
+    width: 8rem;
+    padding: 1rem;
+    background-color: #56ddf5;
+    border: none;
+    outline: none;
+}
