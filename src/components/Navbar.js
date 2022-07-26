@@ -20,7 +20,7 @@ export class Navbar extends Component {
             <Link to="/shop" className="nav-link">Products</Link>
           </li>
         </ul>
-        <div className="cart-toggle" onClick={this.props.cartToggle}>
+        <div className="cart-toggle" onClick={this.props.cartOpen}>
         <span class="mdi mdi-cart"></span>
         </div> 
       </nav>

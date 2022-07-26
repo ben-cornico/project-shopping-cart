@@ -15,13 +15,20 @@ export class App extends Component {
       cartList: [],
     }
 
-    this.cartToggle = this.cartToggle.bind(this);
+    this.cartOpen = this.cartOpen.bind(this);
+    this.cartClose = this.cartClose.bind(this);
     this.addCart = this.addCart.bind(this)
   }
 
-  cartToggle() {
+  cartOpen() {
     this.setState({
-      cartActive: !this.state.cartActive,
+      cartActive: true,
+    })
+  }
+
+  cartClose(){
+    this.setState({
+      cartActive: false,
     })
   }
 
@@ -38,9 +45,9 @@ export class App extends Component {
     return (
       <div className='App'>
 
-        <Cart active={this.state.cartActive} cartList={this.state.cartList}/>
+        <Cart active={this.state.cartActive} cartList={this.state.cartList} cartClose={this.cartClose} cartOpen={this.cartOpen}/>
         <BrowserRouter>
-        <Navbar cartToggle={this.cartToggle}/>
+        <Navbar cartOpen={this.cartOpen}/>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/shop' element={<Shop addCart={this.addCart}/>} />
