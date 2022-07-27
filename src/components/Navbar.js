@@ -10,14 +10,18 @@ export class Navbar extends Component {
     return (
       <nav>
         <h3 className='app-title'>
-          <Link to="/" className="nav-link">Zatapos</Link>
+          <Link to="/" className="nav-link app-title">Zatapos</Link>
         </h3>
         <ul className="nav-list">
           <li className="nav-item">
-            <Link to="/" className="nav-link">Home</Link>
+            <div className="nav-link-container">
+              <Link to="/" className="nav-link">Home</Link>
+            </div>
           </li>
           <li className="nav-item">
-            <Link to="/shop" className="nav-link">Products</Link>
+            <div className="nav-link-container">
+              <Link to="/shop" className="nav-link">Products</Link>
+            </div>
           </li>
         </ul>
         <div className="cart-toggle" onClick={this.props.cartOpen}>

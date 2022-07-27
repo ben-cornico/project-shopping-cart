@@ -5,8 +5,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
-    background-color: aquamarine;
+    padding: 0 3rem;
+    background-color: #7fffd4;
+
 }
 
 .nav-list {
@@ -17,11 +18,37 @@ nav {
 
 .nav-link {
     text-decoration: none;
+    font-size: 1.25rem;
+    padding:1rem;
 }
+.nav-link.app-title {
+    font-size: 1.5rem;
+}
+
+.nav-link-container {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.nav-link-container:hover {
+    transition: 0.3s ease-in;
+    background-color: #74e7c1;
+}
+
+/* .nav-item {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    transition: 0.3s ease-in;
+    background-color: #6adbb5;
+} */
 
 ul {
     list-style-type: none;
 }
+
 
 .cart {
     position: absolute;
