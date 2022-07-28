@@ -35,15 +35,32 @@ nav {
     background-color: #74e7c1;
 }
 
-/* .nav-item {
-    padding: 1rem;
-    cursor: pointer;
+.cart-toggle {
+    position: relative;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-item:hover {
-    transition: 0.3s ease-in;
-    background-color: #6adbb5;
-} */
+.cart-num {
+    position: absolute;
+    transform: translate(100%, -70%);
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #45b1c4;
+    font-size: 1.1rem;
+    
+}
+.btn-cart-toggle {
+    font-size: 2rem;
+}
 
 ul {
     list-style-type: none;

@@ -25,7 +25,8 @@ export class Navbar extends Component {
           </li>
         </ul>
         <div className="cart-toggle" onClick={this.props.cartOpen}>
-        <span class="mdi mdi-cart"></span>
+          <div className="cart-num">99</div>
+          <span class="mdi mdi-cart btn-cart-toggle" ></span>
         </div> 
       </nav>
     )
