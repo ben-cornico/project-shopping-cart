@@ -16,8 +16,8 @@ export class Shop extends Component {
     return (
       <div className='shop-div'>
         <div className="shop-list"  onClick={this.props.addCart}>
-
-          <div className="kids-cat">
+          {/* <div className="list kids-cart">
+            <p>KID's</p>
             {
               this.state.products.kids.map(prod => {
                 return (
@@ -36,7 +36,7 @@ export class Shop extends Component {
 
 
           
-          <div className="mens-cat">
+          <div className="list mens-cart">
           <p>Men's</p>
           {
             this.state.products.mens.map(prod => {
@@ -55,6 +55,7 @@ export class Shop extends Component {
           </div>
 
 
+          <div className="list womens-cart">
           
           <p>Women's</p>
           {
@@ -71,6 +72,9 @@ export class Shop extends Component {
               )
             })
           }
+
+          </div> */}
+          
         </div>
       </div>
     )

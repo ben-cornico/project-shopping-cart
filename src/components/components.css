@@ -1,6 +1,8 @@
 /* NAVBAR =============== */
 nav {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -45,6 +47,7 @@ nav {
     align-items: center;
 }
 
+
 .cart-num {
     position: absolute;
     transform: translate(100%, -70%);
@@ -56,10 +59,15 @@ nav {
     border-radius: 100%;
     background-color: #45b1c4;
     font-size: 1.1rem;
-    
+    transition: 0.3s;
+    cursor: pointer;
 }
 .btn-cart-toggle {
     font-size: 2rem;
+    cursor: pointer;}
+
+.cart-toggle:hover > .cart-num {
+    transform: scale(150%);
 }
 
 ul {
@@ -128,3 +136,12 @@ ul {
     border: none;
     outline: none;
 }
+
+.list {
+    border: 1px solid black;
+}
+
+/* 
+.shop-div {
+    margin: 5rem 0;
+} */
