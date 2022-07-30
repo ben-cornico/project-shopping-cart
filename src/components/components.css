@@ -148,13 +148,14 @@ ul {
 
 .shop-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 /* CARD COMPONENT =============== */
 .prod-card {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .prod-name {
@@ -162,6 +163,35 @@ ul {
 }
 
 .prod-img {
-    background-color: #ffffff;;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
+.prod-img:hover {
+    transform: scale(1.1);
+}
+
+
+.btn-add-cart {
+    background-color: #45b1c4;
+    padding: 1rem;
+    font-size: 1.10rem;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+.btn-add-cart:hover {
+    background-color: #317f8d;
+}
+
+.prod-price {
+    color: #727272;
+}
+
+.prod-card > p {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
