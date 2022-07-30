@@ -21,8 +21,15 @@ export class Shop extends Component {
                 this.state.products[cat].map((prod, index) => {
                   return (
                     <div className="prod-card">
-                      <img src={prod.img[1]} alt="" />
-                      <p className="prod-name">{prod.name}</p>
+                      <img src={prod.img[1]} className="prod-img"/>
+                      <div className="btn-add-cart">
+                        Add to Cart
+                      </div>
+                      <p className="prod-price">
+                        {`$${prod.price}`}
+                      </p>
+                      <p className="prod-name">{`${cat}'s`} {prod.name}</p>
+
                     </div>
 
                   )

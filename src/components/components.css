@@ -2,7 +2,7 @@
 nav {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 1px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -145,3 +145,23 @@ ul {
 .shop-div {
     margin: 5rem 0;
 } */
+
+.shop-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+/* CARD COMPONENT =============== */
+.prod-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.prod-name {
+    text-transform: capitalize;
+}
+
+.prod-img {
+    background-color: #ffffff;;
+}
+
