@@ -1,6 +1,7 @@
 import { createBrowserHistory } from 'history';
 import React, { Component } from 'react';
 import './components.css';
+import ProductCard from './ProductCard';
 import productData from './prod/ProductData';
 import prodSizes from './prod/ProductSizes';
 
@@ -10,14 +11,17 @@ export class Shop extends Component {
 
     this.state = {
       products: productData,
-      productSizes: prodSizes
+      productSizes: prodSizes,
+      sizesActive: false,
     }
 
-    console.log(this.state.productSizes['kids'])
+    this.sizesToggle = this.sizesToggle.bind(this)
   }
 
-  handleClick(cat, prod) {
-    console.log(`${cat}'s ${prod}`)
+  sizesToggle() {
+    this.setState({
+      sizesActive: true,
+    })
   }
   render() {
     return (
@@ -28,32 +32,7 @@ export class Shop extends Component {
               return (
                 this.state.products[cat].map((prod, index) => {
                   return (
-                    <div className="prod-card">
-                      <img src={prod.img[1]} className="prod-img"/>
-                      <div className="btn-group-shop">
-                        <button className="btn-add-cart">
-                          Add to Cart
-                        </button>
-                        <div className="prod-sizes">
-                          {
-                            this.state.productSizes[cat].map(size => {
-                              return (
-                                <div className="size-option">
-                                  {size}
-                                </div>
-                              )
-                            })
-                          }
-                        </div>
-                      </div>
-
-                      <p className="prod-price">
-                        {`$${prod.price}`}
-                      </p>
-                      <p className="prod-name">{`${cat}'s`} {prod.name}</p>
-
-                    </div>
-
+                    <ProductCard cat={cat} prod={prod} sizes={this.state.productSizes[cat]}/>
                   )
                 })
               )

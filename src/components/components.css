@@ -76,7 +76,7 @@ ul {
 
 
 .cart {
-    position: absolute;
+    position: fixed;
     background-color: rgb(144, 144, 144);
     height: 100%;
     width: 100px;
@@ -85,7 +85,7 @@ ul {
 
 .cart.hide {
     right: -100px;
-    transition: 1s
+    transition: 1s;
 }
 
 .cart.active {
@@ -200,9 +200,17 @@ ul {
     position: absolute;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #45b1c4;
+    right: 0;
+    transition: 0.3s ease-in;
 }
 
+.prod-sizes.hide {
+    right: -100%;
+}
 
 .size-option {
     display: flex;
@@ -212,4 +220,11 @@ ul {
     border: 1px solid #000;
     height: 2rem;
     width: 2rem;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.size-option:hover {
+    color: #7fffd4;
+    border: 1px solid #7fffd4;
 }
