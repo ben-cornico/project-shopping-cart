@@ -1,6 +1,8 @@
+import { createBrowserHistory } from 'history';
 import React, { Component } from 'react';
 import './components.css';
 import productData from './prod/ProductData';
+import prodSizes from './prod/ProductSizes';
 
 export class Shop extends Component {
   constructor() {
@@ -8,8 +10,14 @@ export class Shop extends Component {
 
     this.state = {
       products: productData,
+      productSizes: prodSizes
     }
 
+    console.log(this.state.productSizes['kids'])
+  }
+
+  handleClick(cat, prod) {
+    console.log(`${cat}'s ${prod}`)
   }
   render() {
     return (
@@ -22,9 +30,23 @@ export class Shop extends Component {
                   return (
                     <div className="prod-card">
                       <img src={prod.img[1]} className="prod-img"/>
-                      <div className="btn-add-cart">
-                        Add to Cart
+                      <div className="btn-group-shop">
+                        <button className="btn-add-cart">
+                          Add to Cart
+                        </button>
+                        <div className="prod-sizes">
+                          {
+                            this.state.productSizes[cat].map(size => {
+                              return (
+                                <div className="size-option">
+                                  {size}
+                                </div>
+                              )
+                            })
+                          }
+                        </div>
                       </div>
+
                       <p className="prod-price">
                         {`$${prod.price}`}
                       </p>

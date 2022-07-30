@@ -43,17 +43,20 @@ export class App extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <>
+      
+      <Cart active={this.state.cartActive} cartList={this.state.cartList} cartClose={this.cartClose} cartOpen={this.cartOpen}/>
+        <div className='App'>
+          <BrowserRouter>
+          <Navbar cartOpen={this.cartOpen}/>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/shop' element={<Shop addCart={this.addCart}/>} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </>
 
-        <Cart active={this.state.cartActive} cartList={this.state.cartList} cartClose={this.cartClose} cartOpen={this.cartOpen}/>
-        <BrowserRouter>
-        <Navbar cartOpen={this.cartOpen}/>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/shop' element={<Shop addCart={this.addCart}/>} />
-          </Routes>
-        </BrowserRouter>
-      </div>
     )
   }
 }
