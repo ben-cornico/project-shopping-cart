@@ -25,14 +25,7 @@ export class Cart extends Component {
     return (
       <div className={this.props.active ? 'cart active' : 'cart hide'} ref={this.wrapperRef}>
         <div className="close-btn" onClick={this.props.cartClose}><span className="mdi mdi-close-box"></span></div>
-        {
-                this.props.cartList.map((x, index) => {
-                    return (
-                        <p key={index}>{x}</p>
-                    )
-                })
 
-        }
       </div>
     )
   }

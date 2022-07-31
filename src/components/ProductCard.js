@@ -7,8 +7,6 @@ export class ProductCard extends Component {
     this.state = {
       sizesActive: false,
     }
-    console.log(props)
-
     this.sizesOpen = this.sizesOpen.bind(this);
     this.sizesClose = this.sizesClose.bind(this)
   }
@@ -23,11 +21,6 @@ export class ProductCard extends Component {
       sizesActive: false,
     })
   }
-
-  handleClick() {
-    console.log("ADDING TO CART")
-  }
-
   render() {
     return (
       <div className='prod-card'>
@@ -40,7 +33,7 @@ export class ProductCard extends Component {
             {
               this.props.sizes.map(size => {
                 return (
-                  <div className="size-option" >
+                  <div className="size-option" onClick={() => this.props.addCart(this.props.prod, {size})}>
                     {size}
                   </div>
                 )
@@ -54,7 +47,7 @@ export class ProductCard extends Component {
           <p className="prod-price" >
             {`$${this.props.prod.price}`}
           </p>
-          <p className="prod-name">{`${this.props.cat}'s`} {this.props.prod.name}</p>
+          <p className="prod-name">{`${this.props.prod.cat}'s`} {this.props.prod.name}</p>
 
       </div>
     )

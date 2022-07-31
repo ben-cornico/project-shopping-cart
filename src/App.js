@@ -32,13 +32,22 @@ export class App extends Component {
     })
   }
 
-  addCart(prod) {
-    const arr = this.state.cartList;
-    arr.push(prod);
-    this.setState({
-      cartList: arr,
-    })
+  addCart(prod, size) {
+    const product = {
+      cat: prod.cat,
+      price: prod.price,
+      name: prod.name,
+      img: prod.img,
+      size: size.size
+    }
 
+    this.setState({
+      cartList: [...this.state.cartList, product]
+    })
+  }
+
+  componentDidUpdate(){
+    console.log(this.state.cartList)
   }
 
   render() {
