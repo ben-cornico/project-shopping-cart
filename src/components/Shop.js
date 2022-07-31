@@ -1,4 +1,3 @@
-import { createBrowserHistory } from 'history';
 import React, { Component } from 'react';
 import './components.css';
 import ProductCard from './ProductCard';
@@ -6,16 +5,34 @@ import productData from './prod/ProductData';
 import prodSizes from './prod/ProductSizes';
 
 export class Shop extends Component {
-  constructor() {
+  constructor(props) {
     super()
 
     this.state = {
-      products: productData,
+      products: [],
       productSizes: prodSizes,
       sizesActive: false,
     }
-
     this.sizesToggle = this.sizesToggle.bind(this)
+  }
+
+  componentDidMount() {
+    const arr = []
+    for(const prop in productData) {
+      productData[prop].forEach(element => {
+        arr.push({
+          cat: prop,
+          name: element.name,
+          img: element.img,
+          price: element.price,
+        })
+      });
+    }
+
+    this.setState({
+      products: arr,
+    })
+
   }
 
   sizesToggle() {
@@ -26,77 +43,13 @@ export class Shop extends Component {
   render() {
     return (
       <div className='shop-div'>
-        <div className="shop-list"  onClick={this.props.addCart}>
+        <div className="shop-list" >
           {
-            Object.keys(this.state.products).map((cat, index) => {
-              return (
-                this.state.products[cat].map((prod, index) => {
-                  return (
-                    <ProductCard cat={cat} prod={prod} sizes={this.state.productSizes[cat]}/>
-                  )
-                })
-              )
-            })
-          }
-          {/* <div className="list kids-cart">
-            <p>KID's</p>
-            {
-              this.state.products.kids.map(prod => {
-                return (
-                  <div>{prod.name}
-                    {
-                      prod.img.map(prodImg => {
-                        
-                        return <img src={prodImg} alt="" srcset="" className='img-prod' />
-                      })
-                    }
-                  </div>
-                )
-              })
-            }
-          </div>
-
-
-          
-          <div className="list mens-cart">
-          <p>Men's</p>
-          {
-            this.state.products.mens.map(prod => {
-              return (
-                <div>{prod.name}
-                  {
-                    prod.img.map(prodImg => {
-                      
-                      return <img src={prodImg} alt="" srcset="" className='img-prod' />
-                    })
-                  }
-                </div>
-              )
-            })
-          }
-          </div>
-
-
-          <div className="list womens-cart">
-          
-          <p>Women's</p>
-          {
-            this.state.products.womens.map(prod => {
-              return (
-                <div>{prod.name}
-                  {
-                    prod.img.map(prodImg => {
-                      
-                      return <img src={prodImg} alt="" srcset="" className='img-prod'/>
-                    })
-                  }
-                </div>
-              )
+            this.state.products.map(product => {
+              return <ProductCard prod={product} sizes={this.state.productSizes[product.cat]} addCart={this.props.addCart}/>
             })
           }
 
-          </div> */}
-          
         </div>
       </div>
     )

@@ -7,13 +7,14 @@ export class ProductCard extends Component {
     this.state = {
       sizesActive: false,
     }
+    console.log(props)
 
     this.sizesOpen = this.sizesOpen.bind(this);
     this.sizesClose = this.sizesClose.bind(this)
   }
   sizesOpen() {
     this.setState({
-      sizesActive: true,
+      sizesActive: true, 
     })
   }
 
@@ -22,6 +23,11 @@ export class ProductCard extends Component {
       sizesActive: false,
     })
   }
+
+  handleClick() {
+    console.log("ADDING TO CART")
+  }
+
   render() {
     return (
       <div className='prod-card'>
@@ -45,11 +51,11 @@ export class ProductCard extends Component {
             </div>
           </div>
         </div>
+          <p className="prod-price" >
+            {`$${this.props.prod.price}`}
+          </p>
+          <p className="prod-name">{`${this.props.cat}'s`} {this.props.prod.name}</p>
 
-        <p className="prod-price" >
-          {`$${this.props.prod.price}`}
-        </p>
-        <p className="prod-name">{`${this.props.cat}'s`} {this.props.prod.name}</p>
       </div>
     )
   }

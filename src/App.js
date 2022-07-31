@@ -32,9 +32,9 @@ export class App extends Component {
     })
   }
 
-  addCart() {
+  addCart(prod) {
     const arr = this.state.cartList;
-    arr.push("test");
+    arr.push(prod);
     this.setState({
       cartList: arr,
     })
@@ -51,7 +51,7 @@ export class App extends Component {
           <Navbar cartOpen={this.cartOpen}/>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/shop' element={<Shop addCart={this.addCart}/>} />
+              <Route path='/shop' element={<Shop addCart={this.addCart}/>}/>
             </Routes>
           </BrowserRouter>
         </div>

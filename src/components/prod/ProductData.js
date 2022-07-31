@@ -4,10 +4,10 @@ const productData = {
             name: 'Weekend',
             price: 49.99,
             img: [
-                require('./kids weekend chelsea/1.webp'),
-                require('./kids weekend chelsea/2.webp'),
-                require('./kids weekend chelsea/3.webp'),
-                require('./kids weekend chelsea/4.webp')
+                require('./kids weekend/1.webp'),
+                require('./kids weekend/2.webp'),
+                require('./kids weekend/3.webp'),
+                require('./kids weekend/4.webp')
             ]
         },
         {
