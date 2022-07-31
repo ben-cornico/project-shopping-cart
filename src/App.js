@@ -33,22 +33,43 @@ export class App extends Component {
   }
 
   addCart(prod, size) {
-    const product = {
-      cat: prod.cat,
-      price: prod.price,
-      name: prod.name,
-      img: prod.img,
-      size: size.size
+    const cartId = this.makeCartId(prod.id, size.size);
+    const arr = this.state.cartList
+    const duplicate = arr.every((cartProd, index, arr) => {
+      if(cartProd.cartProdId === cartId) {
+        arr[index].quantity += 1;
+        this.setState({
+          cartList: arr,
+        })
+      }
+      return cartProd.cartProdId !== cartId;
+    });
+
+    if(duplicate) {
+      console.log('AWAN DUPLICATE NA')
+      const product = {
+        id: prod.id,
+        cartProdId: cartId,
+        cat: prod.cat,
+        price: prod.price,
+        name: prod.name,
+        img: prod.img,
+        size: size.size,
+        quantity: 1,
+      }
+    
+      this.setState({
+        cartList: [...this.state.cartList, product]
+      })
+
     }
-
-    this.setState({
-      cartList: [...this.state.cartList, product]
-    })
-  }
-
-  componentDidUpdate(){
     console.log(this.state.cartList)
   }
+
+  makeCartId(id, size) {
+    return id + size
+  }
+
 
   render() {
     return (

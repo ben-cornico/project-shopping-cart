@@ -21,6 +21,7 @@ export class Shop extends Component {
     for(const prop in productData) {
       productData[prop].forEach(element => {
         arr.push({
+          id: element.id,
           cat: prop,
           name: element.name,
           img: element.img,

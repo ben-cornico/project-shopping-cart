@@ -48,7 +48,6 @@ export class ProductCard extends Component {
             {`$${this.props.prod.price}`}
           </p>
           <p className="prod-name">{`${this.props.prod.cat}'s`} {this.props.prod.name}</p>
-
       </div>
     )
   }

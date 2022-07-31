@@ -1,6 +1,7 @@
 const productData = {
     kid: [
         {
+            id: '001',
             name: 'Weekend',
             price: 49.99,
             img: [
@@ -11,6 +12,7 @@ const productData = {
             ]
         },
         {
+            id: '002',
             name: 'Weekend Chelsea',
             price: 59.99,
             img: [
@@ -24,6 +26,8 @@ const productData = {
 
     men: [
         {
+            
+            id: '101',
             name: 'Weekend',
             price: 49.99,
             img: [
@@ -34,6 +38,8 @@ const productData = {
             ]
         },
         {
+            
+            id: '102',
             name: 'Cityscape',
             price: 59.99,
             img: [
@@ -44,6 +50,8 @@ const productData = {
             ]
         },
         {
+            
+            id: '103',
             name: 'Everyday Move Slip-ons',
             price: 89.99,
             img: [
@@ -54,6 +62,8 @@ const productData = {
             ]
         },
         {
+            
+            id: '104',
             name: 'Everyday Classic',
             price: 79.99,
             img: [
@@ -64,6 +74,8 @@ const productData = {
             ]
         },
         {
+            
+            id: '105',
             name: 'Sunday Slippers',
             price: 39.99,
             img: [
@@ -77,6 +89,7 @@ const productData = {
 
     women: [
         {
+            id: '201',
             name: 'Weekend',
             price: 49.99,
             img: [
@@ -87,6 +100,7 @@ const productData = {
             ]
         },
         {
+            id: '202',
             name: 'Cityscape',
             price: 59.99,
             img: [
@@ -97,6 +111,7 @@ const productData = {
             ]
         },
         {
+            id: '203',
             name: 'Everyday Move Slip-ons',
             price: 89.99,
             img: [
@@ -107,6 +122,7 @@ const productData = {
             ]
         },
         {
+            id: '204',
             name: 'Everyday Classic',
             price: 79.99,
             img: [
@@ -117,6 +133,7 @@ const productData = {
             ]
         },
         {
+            id: '205',
             name: 'Sunday Slippers',
             price: 39.99,
             img: [

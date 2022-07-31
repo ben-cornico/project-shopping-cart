@@ -79,12 +79,13 @@ ul {
     position: fixed;
     background-color: rgb(144, 144, 144);
     height: 100%;
-    width: 100px;
+    width: 800px;
+    overflow: scroll;
     z-index: 2;
 }
 
 .cart.hide {
-    right: -100px;
+    right: -100%;
     transition: 1s;
 }
 
