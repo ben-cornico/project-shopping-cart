@@ -1,47 +1,4 @@
-// import React, { Component, createRef } from 'react'
 
-// export class Cart extends Component {
-//     constructor(props) {
-//         super()
-
-//         this.state = {
-//           active: props.active,
-//         }
-
-//         this.wrapperRef = createRef();
-
-//     }
-
-//     componentDidMount() {
-//       console.log("MOUNT")
-//     }
-
-//     componentWillUnmount(){
-//       console.log("UNMOUNT")
-//     }
-
-
-//   render() {
-//     return (
-//       <div className={this.props.active ? 'cart active' : 'cart hide'} ref={this.wrapperRef}>
-//         <div className="close-btn" onClick={this.props.cartClose}><span className="mdi mdi-close-box"></span></div>
-//         {
-//           this.props.cartList.map((cartProd, index) => {
-//             return (
-//               <div>
-//                 <p>{cartProd.name}</p>
-//                 <img src={cartProd.img[1]} alt="" />
-//                 <p>{cartProd.quantity}</p>
-//               </div>
-//             )
-//           })
-//         }
-//       </div>
-//     )
-//   }
-// }
-
-// export default Cart
 import React, { useState, useEffect } from 'react'
 
 function Cart({cartList, active, cartClose}) {
@@ -58,10 +15,17 @@ function Cart({cartList, active, cartClose}) {
       {
         cart.map((cartProd, index) => {
           return (
-            <div>
-              <p>{cartProd.name}</p>
-              <img src={cartProd.img[1]} alt="" />
-              <p>{cartProd.quantity}</p>
+            <div className='cart-prod' key={index}>
+              <div className="cart-prod-info">
+                <img src={cartProd.img[1]} className="cart-prod-img" />
+                <p className='cart-prod-name'>{`${cartProd.cat}'s`} {cartProd.name}</p>
+              </div>
+              <div className='cart-prod-quantity'>
+                <span className='mdi mdi-close'></span>
+                <p>{cartProd.quantity}</p>
+              </div>
+              
+              <span className='mdi mdi-delete'></span>
             </div>
           )
         })

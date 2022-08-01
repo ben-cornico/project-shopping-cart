@@ -10,6 +10,7 @@ export class ProductCard extends Component {
     this.sizesOpen = this.sizesOpen.bind(this);
     this.sizesClose = this.sizesClose.bind(this)
   }
+  
   sizesOpen() {
     this.setState({
       sizesActive: true, 
@@ -33,7 +34,7 @@ export class ProductCard extends Component {
             {
               this.props.sizes.map(size => {
                 return (
-                  <div className="size-option" onClick={() => this.props.addCart(this.props.prod, {size})}>
+                  <div className="size-option" onClick={() => this.props.addCart(this.props.prod, {size}, 1)}>
                     {size}
                   </div>
                 )
