@@ -17,7 +17,8 @@ export class App extends Component {
 
     this.cartOpen = this.cartOpen.bind(this);
     this.cartClose = this.cartClose.bind(this);
-    this.addCart = this.addCart.bind(this)
+    this.addCart = this.addCart.bind(this);
+    this.getCartNum = this.getCartNum.bind(this)
   }
 
   cartOpen() {
@@ -70,6 +71,15 @@ export class App extends Component {
     return id + size
   }
 
+  getCartNum () {
+    let num = 0;
+    this.state.cartList.forEach(prod => {
+      num += prod.quantity;
+    })
+
+    return num
+  }
+
 
   render() {
     return (
@@ -78,7 +88,7 @@ export class App extends Component {
       <Cart active={this.state.cartActive} cartList={this.state.cartList} cartClose={this.cartClose} cartOpen={this.cartOpen}/>
         <div className='App'>
           <BrowserRouter>
-          <Navbar cartOpen={this.cartOpen}/>
+          <Navbar cartOpen={this.cartOpen} cartProdNum={this.getCartNum()}/>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/shop' element={<Shop addCart={this.addCart}/>}/>
