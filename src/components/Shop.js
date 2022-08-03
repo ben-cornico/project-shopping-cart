@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './components.css';
 import ProductCard from './ProductCard';
-import productData from './prod/ProductData';
+import { getAll } from './prod/ProductData';
 import prodSizes from './prod/ProductSizes';
+
 
 export class Shop extends Component {
   constructor(props) {
@@ -13,13 +14,14 @@ export class Shop extends Component {
       productSizes: prodSizes,
       sizesActive: false,
     }
-    this.sizesToggle = this.sizesToggle.bind(this)
+    this.sizesToggle = this.sizesToggle.bind(this);
   }
 
   componentDidMount() {
     const arr = []
-    for(const prop in productData) {
-      productData[prop].forEach(element => {
+    const prodData = getAll()
+    for(const prop in prodData) {
+      prodData[prop].forEach(element => {
         arr.push({
           id: element.id,
           cat: prop,
@@ -43,16 +45,21 @@ export class Shop extends Component {
   }
   render() {
     return (
-      <div className='shop-div'>
-        <div className="shop-list" >
-          {
-            this.state.products.map(product => {
-              return <ProductCard prod={product} sizes={this.state.productSizes[product.cat]} addCart={this.props.addCart}/>
-            })
-          }
+      <>
+        <div className='shop-div'>
+          <div className="shop-list" >
+            {
+              this.state.products.map(product => {
+                return <ProductCard prod={product} sizes={this.state.productSizes[product.cat]} addCart={this.props.addCart}/>
+              })
+            }
 
+          </div>
         </div>
-      </div>
+
+
+      </>
+
     )
   }
 }

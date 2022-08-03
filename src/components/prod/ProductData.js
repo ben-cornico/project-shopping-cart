@@ -146,4 +146,22 @@ const productData = {
     ]
 }
 
-export default productData
+function getAll() {
+    return productData;
+}
+
+function getProduct(id) {
+    let product;
+    for(const cat in productData) {
+        productData[cat].find(prod =>{
+            if(prod.id === id) {
+                product = prod;
+                product.cat = cat;
+            }
+        })
+    }
+
+    return product
+}
+
+export {getAll, getProduct}

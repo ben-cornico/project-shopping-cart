@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class ProductCard extends Component {
   constructor(props){
@@ -25,7 +26,7 @@ export class ProductCard extends Component {
   render() {
     return (
       <div className='prod-card'>
-        <img src={this.props.prod.img[1]} className="prod-img"/>
+        <Link to={`/shop/${this.props.prod.id}`}><img src={this.props.prod.img[1]} className="prod-img"/></Link>
         <div className="btn-group-shop">
           <button className="btn-add-cart" onClick={this.sizesOpen}>
             Add to Cart

@@ -4,7 +4,8 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 import Navbar from './components/Navbar';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Product from './components/Product';
 
 export class App extends Component {
   constructor(props) {
@@ -92,6 +93,7 @@ export class App extends Component {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/shop' element={<Shop addCart={this.addCart}/>}/>
+              <Route path="/shop/:id" element={<Product />} />
             </Routes>
           </BrowserRouter>
         </div>
