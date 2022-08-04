@@ -10,7 +10,11 @@ function Cart({cartList, active, cartClose}) {
   }, [cartList])
   
   return (
-    <div className={active ? 'cart active' : 'cart hide'}>
+    <>
+    <div className={active ? 'bg-cart' : 'bg-cart hide'} onClick={cartClose}>
+    </div>
+    <div className={active ? 'cart' : 'cart hide'}>
+
       <div className="close-btn" onClick={cartClose}><span className="mdi mdi-close-box"></span></div>
       {
         cart.map((cartProd, index) => {
@@ -31,6 +35,8 @@ function Cart({cartList, active, cartClose}) {
         })
       }
     </div>
+    </>
+    
   )
 }
 
