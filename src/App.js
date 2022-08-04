@@ -156,14 +156,14 @@ export class App extends Component {
         checkOut={this.checkOut}
       />
         <div className='App'>
-          <HashRouter>
+          <BrowserRouter>
           <Navbar cartOpen={this.cartOpen} cartProdNum={this.getCartNum()}/>
             <Routes>
-              <Route path='/project-shopping-cart' element={<Home />} />
+              <Route path='/project-shopping-cart/' element={<Home />} />
               <Route path='/shop' element={<Shop addCart={this.addCart}/>}/>
-              <Route path="/shop/:id" element={<Product  cartOpen={this.cartOpen} addCart={this.addCart}/>} />
+              <Route path="shop/:id" element={<Product  cartOpen={this.cartOpen} addCart={this.addCart}/>} />
             </Routes>
-          </HashRouter>
+          </BrowserRouter>
         </div>
       </>
 

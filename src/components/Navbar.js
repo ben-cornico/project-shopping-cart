@@ -10,12 +10,12 @@ export class Navbar extends Component {
     return (
       <nav>
         <div className='app-title'>
-          <Link to="/project-shopping-cart'" className="nav-link app-title">Zatapos</Link>
+          <Link to="/project-shopping-cart" className="nav-link app-title">Zatapos</Link>
         </div>
         <ul className="nav-list">
           <li className="nav-item">
             <div className="nav-link-container">
-              <Link to="/project-shopping-cart'" className="nav-link">Home</Link>
+              <Link to="/project-shopping-cart" className="nav-link">Home</Link>
             </div>
           </li>
           <li className="nav-item">
