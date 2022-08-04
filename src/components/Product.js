@@ -97,9 +97,7 @@ function Product(props) {
     }
 
     const addToCart = (prod, size) => {
-        console.log(props)
-        console.log("ADDTO CART")
-        props.addCart(prod,size);
+        props.addCart(prod,size, "FROM PRODUCT SHOWCASE");
         props.cartOpen()
     }
 

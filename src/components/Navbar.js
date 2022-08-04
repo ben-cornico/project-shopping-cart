@@ -9,9 +9,9 @@ export class Navbar extends Component {
   render() {
     return (
       <nav>
-        <h3 className='app-title'>
+        <div className='app-title'>
           <Link to="/" className="nav-link app-title">Zatapos</Link>
-        </h3>
+        </div>
         <ul className="nav-list">
           <li className="nav-item">
             <div className="nav-link-container">

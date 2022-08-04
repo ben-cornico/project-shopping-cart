@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 export class Home extends Component {
   render() {
@@ -12,8 +13,7 @@ export class Home extends Component {
               100% water proof shoes for any season.
             </p>
             <div className="btn-group-home">
-              <button className='btn-home'>Shop Women</button>
-              <button className='btn-home'>Shop Men</button>
+              <Link to="/shop"><button className='btn-home'>Shop Now</button></Link>
             </div>
           </div>
 
