@@ -35,7 +35,7 @@ export class ProductCard extends Component {
             {
               this.props.sizes.map(size => {
                 return (
-                  <div className="size-option" onClick={() => this.props.addCart(this.props.prod, {size}, 1)}>
+                  <div className="size-option" onClick={() => this.props.addCart(this.props.prod, {size})}>
                     {size}
                   </div>
                 )

@@ -91,7 +91,12 @@ function Product() {
     const prod = getProduct(id);
     const sizes = prodSizes;
 
-    console.log(prod)
+    let btnAddCart = "product-add-cart";
+    if(size <= 0) {
+        btnAddCart += " hide"
+    }
+
+    console.log(btnAddCart)
   return (
     <div>
         
@@ -121,31 +126,13 @@ function Product() {
                                 )
                             })
                         }
-                        {/* <div className={size === 5 ? "size-selection selected" : "size-selection"} onClick={() => setSize(5)}>
-                            5
-                        </div>
-                        <div className={size === 6 ? "size-selection selected" : "size-selection"} onClick={() => setSize(6)}>
-                            6
-                        </div>
-                        <div className={size === 7 ? "size-selection selected" : "size-selection"} onClick={() => setSize(7)}>
-                            7
-                        </div>
-                        <div className={size === 8 ? "size-selection selected" : "size-selection"} onClick={() => setSize(8)}>
-                            8
-                        </div>
-                        <div className={size === 9 ? "size-selection selected" : "size-selection"} onClick={() => setSize(9)}>
-                            9
-                        </div>
-                        <div className={size === 10 ? "size-selection selected" : "size-selection"} onClick={() => setSize(10)}>
-                            10
-                        </div>
-                        <div className={size === 11 ? "size-selection selected" : "size-selection"} onClick={() => setSize(11)}>
-                            11
-                        </div> */}
-                        
                     </div>
                 </div>
                 
+                <div className="btn-container">
+                    <div className="btn-warning">Select Size</div>
+                    <button className={btnAddCart}>Add to Cart</button>
+                </div>
             </div>
           </div>
         </div>

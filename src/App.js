@@ -34,12 +34,12 @@ export class App extends Component {
     })
   }
 
-  addCart(prod, size, quantity) {
+  addCart(prod, size) {
     const cartId = this.makeCartId(prod.id, size.size);
     const arr = this.state.cartList
     const duplicate = arr.every((cartProd, index, arr) => {
       if(cartProd.cartProdId === cartId) {
-        arr[index].quantity += quantity;
+        arr[index].quantity += 1;
         this.setState({
           cartList: arr,
         })
@@ -57,7 +57,7 @@ export class App extends Component {
         name: prod.name,
         img: prod.img,
         size: size.size,
-        quantity: quantity,
+        quantity: 1,
       }
     
       this.setState({
