@@ -269,8 +269,16 @@ ul {
 
 .cart-prod-quantity {
     display: grid;
-    grid-template-columns: 40px 50px;
+    grid-template-columns: 40px 50px 40px;
     align-items: center;
+}
+
+.cart-prod-quantity > * {
+    text-align: center;
+}
+
+.cart-prod-quantity > span:hover {
+    background-color: #235c65;
 }
 
 .cart-prod .mdi {

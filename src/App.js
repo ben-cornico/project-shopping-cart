@@ -35,8 +35,8 @@ export class App extends Component {
   }
 
   addCart(prod, size) {
-    console.log(prod)
-    const cartId = this.makeCartId(prod.id, size.size);
+    console.log(size)
+    const cartId = this.makeCartId(prod.id, size);
     const arr = this.state.cartList
     const duplicate = arr.every((cartProd, index, arr) => {
       if(cartProd.cartProdId === cartId) {
