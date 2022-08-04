@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
@@ -156,14 +156,14 @@ export class App extends Component {
         checkOut={this.checkOut}
       />
         <div className='App'>
-          <BrowserRouter>
+          <HashRouter>
           <Navbar cartOpen={this.cartOpen} cartProdNum={this.getCartNum()}/>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/shop' element={<Shop addCart={this.addCart}/>}/>
               <Route path="/shop/:id" element={<Product  cartOpen={this.cartOpen} addCart={this.addCart}/>} />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </div>
       </>
 
