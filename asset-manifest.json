@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/project-shopping-cart/static/css/main.0b242dfa.css",
-    "main.js": "/project-shopping-cart/static/js/main.a2db32ef.js",
-    "static/media/homepage.webp": "/project-shopping-cart/static/media/homepage.2ea6d1013f023d9f2eb8.webp",
-    "static/media/3.webp": "/project-shopping-cart/static/media/3.acf7ad966831a728fafe.webp",
-    "static/media/4.webp": "/project-shopping-cart/static/media/4.535a0e2eb466e493e435.webp",
-    "static/media/1.webp": "/project-shopping-cart/static/media/1.ca9355bf626c32fab141.webp",
-    "static/media/2.webp": "/project-shopping-cart/static/media/2.594aa6230589e10cfeae.webp",
-    "index.html": "/project-shopping-cart/index.html",
-    "main.0b242dfa.css.map": "/project-shopping-cart/static/css/main.0b242dfa.css.map",
-    "main.a2db32ef.js.map": "/project-shopping-cart/static/js/main.a2db32ef.js.map"
+    "main.css": "/project-shopping-cart/src/static/css/main.f74687ae.css",
+    "main.js": "/project-shopping-cart/src/static/js/main.c3025cfe.js",
+    "static/media/homepage.webp": "/project-shopping-cart/src/static/media/homepage.2ea6d1013f023d9f2eb8.webp",
+    "static/media/3.webp": "/project-shopping-cart/src/static/media/3.acf7ad966831a728fafe.webp",
+    "static/media/4.webp": "/project-shopping-cart/src/static/media/4.535a0e2eb466e493e435.webp",
+    "static/media/1.webp": "/project-shopping-cart/src/static/media/1.ca9355bf626c32fab141.webp",
+    "static/media/2.webp": "/project-shopping-cart/src/static/media/2.594aa6230589e10cfeae.webp",
+    "index.html": "/project-shopping-cart/src/index.html",
+    "main.f74687ae.css.map": "/project-shopping-cart/src/static/css/main.f74687ae.css.map",
+    "main.c3025cfe.js.map": "/project-shopping-cart/src/static/js/main.c3025cfe.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b242dfa.css",
-    "static/js/main.a2db32ef.js"
+    "static/css/main.f74687ae.css",
+    "static/js/main.c3025cfe.js"
   ]
 }
