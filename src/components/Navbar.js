@@ -20,7 +20,7 @@ export class Navbar extends Component {
           </li>
           <li className="nav-item">
             <div className="nav-link-container">
-              <Link to="/shop" className="nav-link">Products</Link>
+              <Link to="/project-shopping-cart/shop" className="nav-link">Products</Link>
             </div>
           </li>
         </ul>

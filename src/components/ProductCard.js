@@ -26,7 +26,7 @@ export class ProductCard extends Component {
   render() {
     return (
       <div className='prod-card'>
-        <Link to={`/shop/${this.props.prod.id}`}><img src={this.props.prod.img[1]} className="prod-img"/></Link>
+        <Link to={`/project-shopping-cart/shop/${this.props.prod.id}`}><img src={this.props.prod.img[1]} className="prod-img"/></Link>
         <div className="btn-group-shop">
           <button className="btn-add-cart" onClick={this.sizesOpen}>
             Add to Cart

@@ -13,7 +13,7 @@ export class Home extends Component {
               100% water proof shoes for any season.
             </p>
             <div className="btn-group-home">
-              <Link to="/shop"><button className='btn-home'>Shop Now</button></Link>
+              <Link to="/project-shopping-cart/shop"><button className='btn-home'>Shop Now</button></Link>
             </div>
           </div>
 

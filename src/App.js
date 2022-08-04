@@ -160,8 +160,8 @@ export class App extends Component {
           <Navbar cartOpen={this.cartOpen} cartProdNum={this.getCartNum()}/>
             <Routes>
               <Route path='/project-shopping-cart/' element={<Home />} />
-              <Route path='/shop' element={<Shop addCart={this.addCart}/>}/>
-              <Route path="shop/:id" element={<Product  cartOpen={this.cartOpen} addCart={this.addCart}/>} />
+              <Route path='/project-shopping-cart/shop' element={<Shop addCart={this.addCart}/>}/>
+              <Route path="/project-shopping-cart/shop/:id" element={<Product  cartOpen={this.cartOpen} addCart={this.addCart}/>} />
             </Routes>
           </BrowserRouter>
         </div>
