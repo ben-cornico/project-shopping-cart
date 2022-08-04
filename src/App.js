@@ -6,7 +6,6 @@ import Cart from './components/Cart';
 import Navbar from './components/Navbar';
 import React, { Component } from 'react';
 import Product from './components/Product';
-import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
 
 export class App extends Component {
   constructor(props) {

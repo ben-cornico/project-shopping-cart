@@ -83,7 +83,6 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProduct } from './prod/ProductData';
 import prodSizes from './prod/ProductSizes';
-import IMG from './prod/kids weekend/1.webp';
 
 function Product(props) {
     const [size, setSize] = useState(0);

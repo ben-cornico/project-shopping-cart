@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import CartItem from './CartItem';
-import { Link } from 'react-router-dom'
 
 function Cart({cartList, active, cartClose, deleteCartProd, calculateTotal, minusQuantity, plusQuantity, checkOut}) {
   const [cart, setCart] = useState([]);
