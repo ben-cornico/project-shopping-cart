@@ -35,6 +35,7 @@ export class App extends Component {
   }
 
   addCart(prod, size) {
+    console.log(prod)
     const cartId = this.makeCartId(prod.id, size.size);
     const arr = this.state.cartList
     const duplicate = arr.every((cartProd, index, arr) => {
@@ -93,7 +94,7 @@ export class App extends Component {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/shop' element={<Shop addCart={this.addCart}/>}/>
-              <Route path="/shop/:id" element={<Product />} />
+              <Route path="/shop/:id" element={<Product  cartOpen={this.cartOpen} addCart={this.addCart}/>} />
             </Routes>
           </BrowserRouter>
         </div>

@@ -85,7 +85,7 @@ import { getProduct } from './prod/ProductData';
 import prodSizes from './prod/ProductSizes';
 import IMG from './prod/kids weekend/1.webp';
 
-function Product() {
+function Product(props) {
     const [size, setSize] = useState(0);
     const {id} = useParams();
     const prod = getProduct(id);
@@ -96,7 +96,14 @@ function Product() {
         btnAddCart += " hide"
     }
 
-    console.log(btnAddCart)
+    const addToCart = (prod, size) => {
+        console.log(props)
+        console.log("ADDTO CART")
+        props.addCart(prod,size);
+        props.cartOpen()
+    }
+
+    
   return (
     <div>
         
@@ -131,7 +138,7 @@ function Product() {
                 
                 <div className="btn-container">
                     <div className="btn-warning">Select Size</div>
-                    <button className={btnAddCart}>Add to Cart</button>
+                    <button className={btnAddCart} onClick={() => addToCart(prod, size)}>Add to Cart</button>
                 </div>
             </div>
           </div>
