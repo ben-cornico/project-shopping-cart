@@ -49,8 +49,15 @@ export class Shop extends Component {
         <div className='shop-div'>
           <div className="shop-list" >
             {
-              this.state.products.map(product => {
-                return <ProductCard prod={product} sizes={this.state.productSizes[product.cat]} addCart={this.props.addCart}/>
+              this.state.products.map((product, index) => {
+                return (
+                  <ProductCard
+                    prod={product}
+                    sizes={this.state.productSizes[product.cat]}
+                    addCart={this.props.addCart}
+                    key={index}  
+                  />
+                )
               })
             }
 
